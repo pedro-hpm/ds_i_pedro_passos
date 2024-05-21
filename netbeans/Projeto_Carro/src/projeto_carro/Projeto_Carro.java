@@ -1,23 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package projeto_carro;
 
-/**
- *
- * @author CAMARGO
- */
+import java.util.*;
+
 public class Projeto_Carro {
 
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner scan = new Scanner(System.in);
 
-        Carro carro = new Carro();
+        String nome = scan.nextLine();
+        String marca = scan.nextLine();
+        double vel = scan.nextDouble();
+        String buzina = scan.nextLine();
 
-        carro.setRodas(4);
+        Carro carro = new Carro(nome, marca, vel, buzina);
 
-        System.out.println(carro.quantasRodas());
+        System.out.println(carro);
+        
+        System.out.println(carro.Acelerar(20.0));
+
+        System.out.println(carro.Freiar(10.0));
+
+        System.out.println(carro.Buzina);
+
+        scan.close();
     }
     
 }
